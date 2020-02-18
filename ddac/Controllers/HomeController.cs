@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ddac.Models;
+using Activity = System.Diagnostics.Activity;
 
 namespace ddac.Controllers
 {

@@ -1,0 +1,36 @@
+﻿@model ddac.Models.Activity
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Activity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ActName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ActPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AQty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AQty)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Actid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

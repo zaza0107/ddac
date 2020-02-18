@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ddac.Models.Activity>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ActName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ActPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AQty)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AQty)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Actid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Actid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Actid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

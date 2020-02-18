@@ -1,0 +1,48 @@
+﻿@model ddac.Models.Restaurant
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Restaurant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RestName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RestName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RestPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RestPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RDateCheckInDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RDateCheckInDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RDateCheckOutDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RDateCheckOutDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RQty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RQty)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Rid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

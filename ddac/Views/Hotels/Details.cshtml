@@ -1,0 +1,48 @@
+﻿@model ddac.Models.Hotel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hotel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HotelName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HotelName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HotelPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HotelPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HDateCheckInDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HDateCheckInDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HDateCheckOutDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HDateCheckOutDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HQty)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HQty)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Hid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
